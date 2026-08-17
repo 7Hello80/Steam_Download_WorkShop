@@ -377,7 +377,7 @@ journalctl -u steam-download-tool -f        # 实时查看日志
 
 Termux 是 Android 上的终端模拟器 + Linux 用户空间，**无需 root**。借助它，你可以在手机上完成本项目的源码构建、交叉编译与开发调试。
 
-> ⚠️ 能力边界：本项目运行时依赖 DepotDownloader（.NET 8 工具），目前 **.NET 8 没有官方的 Android / Termux 运行时**。因此手机端可以完成构建、启动服务并浏览管理界面，但**下载引擎无法在手机上运行**。需要完整下载功能时，请把构建产物部署到 Linux / Windows / macOS 服务器。
+> ⚠️ 能力边界：本项目运行时依赖 DepotDownloader（.NET 8 工具），目前 **.NET 8 没有官方的 Android / Termux 运行时**。因此手机端可以完成构建、启动服务并浏览管理界面，但**下载引擎无法在手机上运行**。需要完整下载功能时，请把构建产物部署到 Linux / Windows / macOS 服务器。（但如果想要在手机上装.NET8,可去网上搜索教程可搜索到，关键词: "Termux安装 .NET"）
 
 ### 6.1 安装 Termux
 
