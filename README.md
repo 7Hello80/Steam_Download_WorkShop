@@ -37,7 +37,7 @@
 目录结构：
 
 ```
-steamDownLoadTool/
+Steam_Download_WorkShop/
 ├── main.go               # 后端入口
 ├── go.mod / go.sum       # Go 依赖声明
 ├── internal/             # 后端业务代码（config/handler/service/queue 等）
@@ -169,8 +169,8 @@ npm -v
 在 Git Bash 中执行：
 
 ```bash
-git clone <你的仓库地址>
-cd steamDownLoadTool
+git clone https://github.com/7Hello80/Steam_Download_WorkShop
+cd Steam_Download_WorkShop
 ```
 
 如果是通过其他方式拿到的源码压缩包，解压后进入项目根目录即可。
@@ -249,8 +249,8 @@ brew install --cask visual-studio-code
 ### 4.4 获取源码
 
 ```bash
-git clone <你的仓库地址>
-cd steamDownLoadTool
+git clone https://github.com/7Hello80/Steam_Download_WorkShop
+cd Steam_Download_WorkShop
 ```
 
 ### 4.5 构建与运行
@@ -329,8 +329,8 @@ npm -v
 ### 5.5 获取源码
 
 ```bash
-git clone <你的仓库地址>
-cd steamDownLoadTool
+git clone https://github.com/7Hello80/Steam_Download_WorkShop
+cd Steam_Download_WorkShop
 ```
 
 ### 5.6 构建与运行
@@ -353,8 +353,8 @@ Description=Steam Workshop Download Tool
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/steamDownLoadTool
-ExecStart=/opt/steamDownLoadTool/steam-download-tool
+WorkingDirectory=/opt/Steam_Download_WorkShop
+ExecStart=/opt/Steam_Download_WorkShop/steam-download-tool
 Restart=always
 RestartSec=5
 # 可选：通过环境变量覆盖配置
@@ -425,8 +425,8 @@ npm -v
 
 ```bash
 cd ~
-git clone <你的仓库地址>
-cd steamDownLoadTool
+git clone https://github.com/7Hello80/Steam_Download_WorkShop
+cd Steam_Download_WorkShop
 ./build.sh
 ```
 
@@ -454,7 +454,7 @@ cd steamDownLoadTool
 ```bash
 pkg install openssh
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w" -o steam-download-tool-linux .
-scp steam-download-tool-linux user@你的服务器:/opt/steamDownLoadTool/
+scp steam-download-tool-linux user@你的服务器:/opt/Steam_Download_WorkShop/
 ```
 
 ### 6.6 关于 VS Code（可选）
@@ -651,4 +651,3 @@ npm config set registry https://registry.npmmirror.com
 
 ### Q9：构建出来的二进制能直接拷到别的机器用吗？
 可以。后端是纯静态编译（`CGO_ENABLED=0`）、前端已嵌入，目标机器**同系统同架构**时直接拷贝 `steam-download-tool`（Windows 为 `.exe`）+ `DepotDownloader` + `config.yaml` 即可运行，无需安装 Go / Node.js。跨系统请参考 7.4 节交叉编译。
-
