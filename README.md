@@ -51,9 +51,6 @@ steamDownLoadTool/
 ├── output/               # 下载产物输出目录
 ├── static/               # 静态资源目录
 ├── data/                 # SQLite 数据库文件目录
-├── tools/reconvert/      # 辅助转换工具（Go 编写，可选）
-├── RePKG.exe             # Windows 壁纸打包辅助工具（可选）
-└── lib.dex               # Android 端 mpkg 解包辅助工具（可选）
 ```
 
 ---
